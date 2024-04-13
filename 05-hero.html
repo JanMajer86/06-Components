@@ -30,14 +30,27 @@
             header {
                 color: #fff;
                 height: 100vh;
-                position: relative;
 
-                background-image: linear-gradient(
+                /* position: relative; */
+                /* background-size: 40px 40px; */
+                background-color: #444;
+                background-image: radial-gradient(
+                        circle at 25% 50%,
+
+                        rgba(0, 0, 0, 1) 25%,
+                        rgba(2, 0, 36, 0) 60%
+                    ),
+                    radial-gradient(
+                        circle,
+                        rgba(232, 212, 100, 0.6) 1px,
+                        rgba(0, 0, 0, 0) 1px
+                    ),
+                    linear-gradient(
                         rgba(47, 47, 47, 0.6),
                         rgba(47, 47, 47, 0.6)
                     ),
                     url(marc-fanelli-isla-xo4ValczbuA-unsplash.jpg);
-                background-size: cover;
+                background-size: cover, 40px 40px, cover, cover;
             }
 
             nav {
