@@ -27,7 +27,6 @@ const buttonRight = document.querySelector(".btn--right");
 let page = 0;
 const maxLength = pageLinks.length - 1;
 
-console.log("page: " + page);
 changePaginationNumber(page);
 
 buttonLeft.addEventListener("click", function () {
@@ -43,10 +42,7 @@ for (let i = 0; i < pageLinks.length; i++) {
 }
 
 function getId(btn) {
-  console.log("button id: " + btn.id);
   page = parseInt(btn.id);
-  console.log("page: " + page);
-
   changePaginationNumber(page);
 }
 
@@ -56,8 +52,6 @@ function arrowButtonClick(direction) {
   if (page < 0) page = 0;
   if (page > maxLength) page = maxLength;
 
-  console.log("page: " + page);
-
   changePaginationNumber(page);
 }
 
@@ -66,5 +60,4 @@ function changePaginationNumber(page) {
     pageLink.classList.remove("page-link--current");
   });
   pageLinks[page].classList.add("page-link--current");
-  console.log("current page: " + page);
 }
